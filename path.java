@@ -27,7 +27,7 @@ public class path {
     }
 
     public static void main(String[] args) {
-        String str="NNNWEEW";
+        String str="NNNWEEEEW";
         System.out.println(shortestDistance(str));
     }
 }
