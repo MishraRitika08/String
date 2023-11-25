@@ -1,13 +1,29 @@
 public class file3 {
 
-    public static void toUpper(String str){
-        for(int i=0;i<str.length();i++){
-            System.out.print((str.charAt(i)).toUpperCase());
+    public static String toUpper(String str){
+        StringBuilder sb = new StringBuilder();
+        char ch=Character.toUpperCase(str.charAt(0));
+        sb.append(ch);
+        
+        for(int i=1;i<str.length();i++){
+            
+            if(str.charAt(i)==' ' && i<str.length()-1){
+              sb.append(str.charAt(i));
+              i++;
+              sb.append(Character.toUpperCase(str.charAt(i)));
+            }
+
+            else{
+                sb.append(str.charAt(i));
+            }
+
         }
+        return sb.toString();
     }
     public static void main(String[] args) {
-        String name="itsmy name";
-        toUpper(name);
+
+        String name="its my name";
+        System.out.println(toUpper(name));
         
     }
 }
